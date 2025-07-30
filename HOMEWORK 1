@@ -1,0 +1,14 @@
+monday = float(input("enter your enpenses for monday: "))
+tuesday = float(input("enter your enpenses for thuesday: "))
+wednesday = float(input("enter your enpenses for wednesday: "))
+thursday = float(input("enter your enpenses for thursday:"))
+friday = float(input("enter your expenses for friday: "))
+saturday = float(input("enter your expenses for satyrday: "))
+sunday = float(input("enter your expenses for sunday: "))
+
+sum = monday + tuesday + wednesday + thursday + friday + saturday + sunday
+
+avareg = sum / 7
+
+print(f"All expenses for week: {sum}")
+print(f"Avarage for day {round(avareg)}")
