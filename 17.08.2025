@@ -1,0 +1,23 @@
+data = ("O!", "Megacom", "0705", "Beeline", "0550", "0770", "Katel", "0510", "Fonex", "0543")
+
+designations = []
+codes = []
+
+for item in data:
+    if item.isdigit():
+        codes.append(item)
+    else:
+        designations.append(item)
+
+print("Designations:", designations)
+print("Codes:", codes)
+operatos = dict(zip(designations ,[ {item} for item in codes]))
+
+for bad in ["Fonex","Katel"]:
+    operatos.pop(bad,None)
+operatos["O!"].add("0999")
+operatos["Megacom"].add("0555")
+operatos["Beeline"].add("0777")
+
+for designations, codes in operatos.items():
+    print(f"{designations} - {codes}")
